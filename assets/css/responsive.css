@@ -1,0 +1,361 @@
+/* Responsive Design for Student Management System */
+
+/* Tablets and Small Laptops (768px - 1024px) */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+    }
+    
+    .main-content {
+        margin-left: 220px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+    
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .subjects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 0;
+    }
+    
+    .sidebar .logo h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    
+    .nav-links li {
+        margin: 5px;
+    }
+    
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+    
+    .table-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    /* Form responsive adjustments */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Button adjustments */
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Action buttons in tables */
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        margin: 2px 0;
+    }
+    
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+    
+    /* Attendance buttons */
+    .attendance-options {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .attendance-btn {
+        width: 100%;
+    }
+    
+    /* Chart containers */
+    .chart-container {
+        padding: 15px;
+    }
+    
+    /* Profile page adjustments */
+    .profile-container {
+        padding: 20px;
+    }
+    
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+    }
+    
+    .header {
+        padding: 12px;
+    }
+    
+    .header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .table-container {
+        padding: 10px;
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 500px; /* Allow horizontal scroll */
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 6px 8px;
+    }
+    
+    /* Login page responsive */
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .login-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .login-option {
+        padding: 15px;
+    }
+    
+    /* Hide less important columns on small screens */
+    .mobile-hide {
+        display: none;
+    }
+    
+    /* Compact forms */
+    .filter-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .filter-group .form-group {
+        width: 100%;
+    }
+    
+    /* Quick actions grid */
+    .quick-actions {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .action-card {
+        padding: 15px;
+    }
+    
+    /* Subject cards */
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .subject-actions {
+        flex-direction: column;
+    }
+    
+    .subject-actions .btn {
+        width: 100%;
+        margin: 2px 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .btn,
+    .action-buttons,
+    .nav-links {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    .header {
+        box-shadow: none !important;
+        border-bottom: 2px solid #333;
+    }
+    
+    .stat-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+    
+    .table-container {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+    
+    a {
+        text-decoration: none !important;
+        color: #333 !important;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .stat-card,
+    .table-container,
+    .chart-container {
+        border: 0.5px solid #e0e0e0;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .sidebar {
+        height: 100vh;
+        overflow-y: auto;
+    }
+    
+    .nav-links {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #ffffff;
+        --card-bg: #2d2d2d;
+        --border-color: #404040;
+    }
+    
+    body {
+        background: var(--bg-color);
+        color: var(--text-color);
+    }
+    
+    .header,
+    .stat-card,
+    .table-container,
+    .chart-container {
+        background: var(--card-bg);
+        border-color: var(--border-color);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background: var(--card-bg);
+        color: var(--text-color);
+        border-color: var(--border-color);
+    }
+    
+    table {
+        color: var(--text-color);
+    }
+    
+    th {
+        background: #333;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .stat-card:hover,
+    .action-card:hover {
+        transform: none;
+    }
+}
