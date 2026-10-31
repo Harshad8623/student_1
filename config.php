@@ -7,10 +7,10 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'student_management_system';
+$host = getenv('DB_HOST') ?: 'localhost';
+$username = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: '';
+$database = getenv('DB_NAME') ?: 'college_student';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
